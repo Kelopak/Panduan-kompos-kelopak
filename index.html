@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KELOPAK (Kelompok Olah Sampah Kreatif)</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-50 text-gray-800">
-  <header class="bg-green-700 text-white p-6 text-center">
+<body class="bg-blue-100 text-gray-800">
+
+  <!-- Judul -->
+  <header class="text-center py-6 bg-blue-800 text-white">
     <h1 class="text-3xl font-bold">KELOPAK (Kelompok Olah Sampah Kreatif)</h1>
   </header>
 
+  <!-- Video Section -->
+  <section class="flex flex-col md:flex-row justify-center gap-6 p-6 bg-blue-200">
+    <iframe class="w-full md:w-1/2 aspect-video rounded-lg shadow" src="https://www.youtube.com/embed/DSfdgPct_h0" frameborder="0" allowfullscreen></iframe>
+    <iframe class="w-full md:w-1/2 aspect-video rounded-lg shadow" src="https://www.youtube.com/embed/bwKKA2AUNHM" frameborder="0" allowfullscreen></iframe>
+  </section>
+
   <!-- Panduan Pembuatan Kompos -->
-  <section class="p-6 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">🌱 Langkah-Langkah Pembuatan Kompos (Rinci):</h2>
+  <section class="py-10 px-6 bg-gradient-to-b from-green-200 via-green-100 to-green-50">
+    <h2 class="text-2xl font-bold mb-4 text-center">🌱 Langkah-Langkah Pembuatan Kompos</h2>
 
-    <h3 class="text-xl font-semibold mt-4">1. Pengumpulan Sampah Organik</h3>
-    <ul class="list-disc list-inside ml-4">
-      <li>Kumpulkan sampah dapur seperti sisa sayur, buah, dan daun-daunan kering.</li>
-      <li>Hindari bahan yang berminyak, berprotein tinggi (daging/susu), dan berbahan kimia.</li>
-    </ul>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div>
+        <h3 class="font-semibold">1. Pengumpulan Sampah Organik</h3>
+        <ul class="list-disc ml-6">
+          <li>Kumpulkan sampah dapur seperti sisa sayur, buah, dan daun-daunan kering.</li>
+          <li>Hindari bahan yang berminyak, berprotein tinggi (daging/susu), dan berbahan kimia.</li>
+        </ul>
+      </div>
 
-    <h3 class="text-xl font-semibold mt-4">2. Pencacahan Bahan</h3>
-    <ul class="list-disc list-inside ml-4">
-      <li>Potong kecil-kecil sampah organik agar lebih mudah terurai.</li>
-      <li>Gunakan pisau atau alat pencacah.</li>
-    </ul>
+      <div>
+        <h3 class="font-semibold">2. Pencacahan Bahan</h3>
+        <ul class="list-disc ml-6">
+          <li>Potong kecil-kecil sampah organik agar lebih mudah terurai.</li>
+          <li>Gunakan pisau atau alat pencacah.</li>
+        </ul>
+      </div>
 
-    <h3 class="text-xl font-semibold mt-4">3. Penyusunan Lapisan</h3>
-    <ul class="list-disc list-inside ml-4">
-      <li>Siapkan wadah komposter (bisa dari ember bekas).</li>
-      <li>Susun secara berlapis:</li>
-      <ul class="list-disc list-inside ml-8">
-        <li>Lapisan kering (daun kering, kardus)</li>
-        <li>Lapisan basah (sisa makanan, sayur)</li>
-        <li>Taburi EM4 atau aktivator mikroba (bisa juga pakai cairan gula+air cucian beras)</li>
-      </ul>
-    </ul>
+      <div>
+        <h3 class="font-semibold">3. Penyusunan Lapisan</h3>
+        <ul class="list-disc ml-6">
+          <li>Siapkan wadah komposter (bisa dari ember bekas).</li>
+          <li>Susun secara berlapis: lapisan kering → lapisan basah → taburi EM4 atau cairan aktivator.</li>
+        </ul>
+      </div>
 
-    <h3 class="text-xl font-semibold mt-4">4. Fermentasi dan Pemeliharaan</h3>
-    <ul class="list-disc list-inside ml-4">
-      <li>Tutup rapat wadah.</li>
-      <li>Aduk seminggu sekali agar udara masuk.</li>
-      <li>Jaga kelembaban (jangan terlalu basah atau kering).</li>
-      <li>Proses ini butuh sekitar <strong>1–2 bulan</strong>.</li>
-    </ul>
+      <div>
+        <h3 class="font-semibold">4. Fermentasi dan Pemeliharaan</h3>
+        <ul class="list-disc ml-6">
+          <li>Tutup rapat wadah, aduk seminggu sekali agar udara masuk.</li>
+          <li>Jaga kelembaban. Proses ini butuh sekitar 1–2 bulan.</li>
+        </ul>
+      </div>
 
-    <h3 class="text-xl font-semibold mt-4">5. Panen Kompos</h3>
-    <ul class="list-disc list-inside ml-4">
-      <li>Kompos siap saat bau tidak menyengat dan tekstur seperti tanah gembur.</li>
-      <li>Saring jika perlu, lalu simpan dalam wadah kering.</li>
-    </ul>
+      <div>
+        <h3 class="font-semibold">5. Panen Kompos</h3>
+        <ul class="list-disc ml-6">
+          <li>Kompos siap saat bau tidak menyengat dan tekstur seperti tanah gembur.</li>
+          <li>Saring jika perlu, lalu simpan dalam wadah kering.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <!-- Video -->
-  <section class="p-6 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/DSfdgPct_h0" title="Video Pembuatan Kompos 1" allowfullscreen></iframe>
-    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/bwKKA2AUNHM" title="Video Pembuatan Kompos 2" allowfullscreen></iframe>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-green-800 text-white text-center p-4 mt-8">
-    <p>© 2025 KELOPAK - Kelompok Olah Sampah Kreatif</p>
-    <p>ITS Surabaya</p>
-  </footer>
 </body>
 </html>
