@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistem Informasi - Video & Panduan</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Pembuatan Kompos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f5f9;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #166534;
+    }
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .video-container {
+        flex-direction: row;
+      }
+      iframe {
+        width: 48%;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body>
+  <h1>Video Panduan Pembuatan Kompos</h1>
 
-  <!-- Header (optional) -->
-  <header class="p-4 bg-white shadow-md">
-    <h1 class="text-xl font-bold text-center">Sistem Informasi Produk</h1>
-  </header>
-
-  <!-- Video Section -->
-  <section class="w-full max-w-2xl mx-auto mt-6 px-4">
-    <div class="aspect-w-16 aspect-h-9">
-      <iframe class="w-full h-64 md:h-96 rounded-xl shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="Video Produk" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- Panduan Produk Section -->
-  <section class="max-w-2xl mx-auto mt-10 px-4">
-    <h2 class="text-2xl font-semibold mb-4">Panduan Penggunaan Produk</h2>
-    <div class="space-y-4">
-      <div class="flex items-start gap-3">
-        <div class="bg-purple-100 p-2 rounded-full">
-          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h13M9 11L5 15m0 0l-4-4m4 4V4"/></svg>
-        </div>
-        <p><strong>Langkah 1:</strong> Pilih produk yang ingin digunakan.</p>
-      </div>
-      <div class="flex items-start gap-3">
-        <div class="bg-purple-100 p-2 rounded-full">
-          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-        </div>
-        <p><strong>Langkah 2:</strong> Klik tombol "Mulai" atau "Gunakan".</p>
-      </div>
-      <div class="flex items-start gap-3">
-        <div class="bg-purple-100 p-2 rounded-full">
-          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <p><strong>Langkah 3:</strong> Ikuti instruksi yang muncul di layar.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 mt-12 pb-6">
-    &copy; 2025 Sistem Informasi Produk. All rights reserved.
-  </footer>
-
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/DSfdgPct_h0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/bwKKA2AUNHM" allowfullscreen></iframe>
+  </div>
 </body>
 </html>
