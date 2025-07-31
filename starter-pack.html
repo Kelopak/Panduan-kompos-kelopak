@@ -12,18 +12,19 @@
       background-position: center;
       background-repeat: no-repeat;
     }
-    .bg-sidebar { background-color: #472F5B; }
-    .bg-menu { background-color: #715C83; }
+    .bg-sidebar { background-color: #203732; }
+    .bg-menu-active { background-color: #715C83; }
+    .bg-menu-hover { background-color: #8F79A1; }
     .bg-main-header { background-color: #472F5B; }
-    .bg-content { background-color: rgba(113,92,131,0.85); }
+    .bg-content { background-color: #8F79A1; }
     .bg-footer { background-color: #472F5B; }
     .text-light { color: #F6F4F8; }
   </style>
 </head>
-<body class="text-light">
+<body class="bg-content text-light">
 
-  <!-- Drawer Menu Trigger -->
-  <button id="menu-btn" class="fixed top-4 left-4 z-30 bg-main-header text-light rounded-full p-2 shadow-md focus:outline-none md:hidden" aria-label="Menu">
+  <!-- Drawer Menu Trigger (Floating Button) -->
+  <button id="menu-btn" class="fixed top-4 left-4 z-30 bg-sidebar text-light rounded-full p-2 shadow-md focus:outline-none md:hidden" aria-label="Menu">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
     </svg>
@@ -32,37 +33,48 @@
   <!-- Drawer Menu Overlay -->
   <div id="drawer" class="fixed inset-0 bg-black bg-opacity-30 z-40 hidden">
     <aside class="bg-sidebar w-56 h-full shadow-lg flex flex-col pt-6 px-4 animate-slidein">
-      <button id="close-btn" class="self-end mb-6 text-light bg-menu rounded-full p-2" aria-label="Tutup Menu">
+      <button id="close-btn" class="self-end mb-6 text-light bg-menu-active rounded-full p-2" aria-label="Tutup Menu">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
       <nav class="flex flex-col gap-1">
-        <a href="starter-pack.html" class="rounded py-2 px-2 bg-menu text-light text-base font-semibold transition mb-1">Starter Pack</a>
-        <a href="index.html" class="rounded py-2 px-2 bg-menu text-light text-base font-medium transition">Panduan Kompos</a>
+        <a href="starter-pack.html" class="rounded py-2 px-2 bg-menu-active text-light text-base font-semibold transition mb-1">Starter Kit</a>
+        <a href="index.html" class="rounded py-2 px-2 hover:bg-menu-hover text-light text-base font-medium transition">Panduan Kompos</a>
       </nav>
     </aside>
   </div>
 
-  <!-- Desktop Sidebar -->
-  <aside class="hidden md:flex w-40 bg-sidebar flex-col pt-6 shadow-lg fixed inset-y-0 left-0 z-10">
-    <nav class="flex flex-col gap-1 px-2">
-      <a href="starter-pack.html" class="rounded py-2 px-2 bg-menu text-light text-base font-semibold transition mb-1">Starter Pack</a>
-      <a href="index.html" class="rounded py-2 px-2 bg-menu text-light text-base font-medium transition">Panduan Kompos</a>
-    </nav>
-  </aside>
-
+  <!-- Main Content -->
   <div class="flex flex-col min-h-screen md:pl-0">
+    <!-- Desktop Sidebar (hidden on mobile) -->
+    <aside class="hidden md:flex w-40 bg-sidebar flex-col pt-6 shadow-lg fixed inset-y-0 left-0 z-10">
+      <nav class="flex flex-col gap-1 px-2">
+        <a href="starter-pack.html" class="rounded py-2 px-2 bg-menu-active text-light text-base font-semibold transition mb-1">Starter Kit</a>
+        <a href="index.html" class="rounded py-2 px-2 hover:bg-menu-hover text-light text-base font-medium transition">Panduan Kompos</a>
+      </nav>
+    </aside>
+
     <main class="flex-1 md:ml-40">
+      <!-- Judul -->
       <header class="text-center py-4 bg-main-header text-light">
-        <h1 class="text-xl md:text-2xl font-bold">KELOPAK</h1>
+        <h1 class="text-xl md:text-2xl font-bold">Starter Kit</h1>
         <div class="text-xs md:text-base italic mt-1">Kelompok Olah Sampah Kreatif</div>
       </header>
+
+      <!-- Subjudul -->
+      <section class="text-center mt-4">
+        <h2 class="text-base md:text-xl font-semibold text-light drop-shadow flex items-center justify-center gap-2">
+          <span>🌱</span> Starter Kit Kompos
+        </h2>
+      </section>
+
+      <!-- Isi Starter Kit -->
       <section class="w-full flex justify-center py-4 md:py-8">
-        <div class="w-full max-w-3xl bg-content rounded-lg p-3 md:p-6 shadow-lg">
-          <h2 class="text-lg md:text-2xl font-bold text-center mb-3 md:mb-6">STARTER KIT KOMPOS</h2>
+        <div class="w-full max-w-3xl bg-menu-active rounded-lg p-3 md:p-6 shadow-lg">
+          <h2 class="text-lg md:text-2xl font-bold text-center mb-3 md:mb-6 text-light">Starter Kit Kompos</h2>
           <p class="text-sm md:text-base mb-3 text-center italic">Panduan dan paket awal pengolahan kompos</p>
-          <ul class="list-disc list-inside ml-2 md:ml-4 space-y-1 md:space-y-2 text-xs md:text-base">
+          <ul class="list-disc list-inside ml-2 md:ml-4 space-y-1 md:space-y-2 text-xs md:text-base text-light">
             <li>Wadah Kompos dari bahan bekas</li>
             <li>Tanah/skam</li>
             <li>Limbah (organik): Daun basah/kering, ranting yang dicacah, bahan organik lainnya</li>
@@ -76,6 +88,8 @@
           </p>
         </div>
       </section>
+
+      <!-- Footer -->
       <footer class="bg-footer text-light text-center p-2 md:p-4 mt-4 md:mt-8 text-xs md:text-sm">
         <p>© 2025 KELOPAK - Kelompok Olah Sampah Kreatif</p>
         <p>ITS Surabaya</p>
@@ -87,6 +101,7 @@
       </footer>
     </main>
   </div>
+
   <!-- Drawer Animation -->
   <style>
     @keyframes slidein {
@@ -97,6 +112,8 @@
       animation: slidein 0.2s cubic-bezier(0.4,0,0.2,1);
     }
   </style>
+
+  <!-- Drawer Menu Script -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const drawer = document.getElementById('drawer');
