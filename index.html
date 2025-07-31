@@ -6,54 +6,53 @@
   <title>KELOPAK</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .bg-kelopak-header { background-color: #472F5B; }
-    .bg-kelopak-sub { background-color: #715C83; }
-    .bg-kelopak-video { background-color: #8F79A1; }
-    .bg-kelopak-panduan { background: linear-gradient(to bottom, #526863, #314641); }
-    .bg-kelopak-footer { background-color: #203732; }
-    .text-kelopak-light { color: #F6F4F8; }
-    .menu-active { background-color: #8F79A1; color: #fff; }
-    .menu-inactive { background-color: #715C83; color: #F6F4F8; }
-    .menu-inactive:hover { background-color: #8F79A1; color: #fff; }
+    .bg-sidebar { background-color: #203732; }
+    .bg-menu-active { background-color: #715C83; }
+    .bg-menu-hover { background-color: #8F79A1; }
+    .bg-main-header { background-color: #472F5B; }
+    .bg-content { background-color: #8F79A1; }
+    .bg-footer { background-color: #203732; }
+    .text-light { color: #F6F4F8; }
+    .text-dark { color: #F6F4F8; }
   </style>
 </head>
-<body class="bg-kelopak-video text-gray-100">
+<body class="bg-content text-light">
 
   <div class="flex min-h-screen">
     <!-- Sidebar Menu -->
-    <aside class="w-60 bg-kelopak-header flex flex-col pt-10 shadow-lg">
-      <nav class="flex flex-col gap-2 px-4">
-        <a href="starter-pack.html" class="rounded-md py-3 px-4 menu-inactive text-lg font-medium transition">Apa itu Starter Pack?</a>
-        <a href="index.html" class="rounded-md py-3 px-4 menu-active text-lg font-medium transition">Panduan Kompos</a>
+    <aside class="md:w-60 w-32 bg-sidebar flex flex-col pt-6 shadow-lg">
+      <nav class="flex flex-col gap-2 px-2">
+        <a href="starter-pack.html" class="rounded-md py-2 px-2 hover:bg-menu-hover text-light text-base font-medium transition">Apa itu Starter Pack?</a>
+        <a href="index.html" class="rounded-md py-2 px-2 bg-menu-active text-light text-base font-semibold transition">Panduan Kompos</a>
       </nav>
     </aside>
 
     <!-- Main Content -->
     <main class="flex-1">
       <!-- Judul -->
-      <header class="text-center py-6 bg-kelopak-header text-kelopak-light">
-        <h1 class="text-3xl font-bold">KELOPAK</h1>
+      <header class="text-center py-6 bg-main-header text-light">
+        <h1 class="text-2xl md:text-3xl font-bold">KELOPAK</h1>
         <div class="text-base italic mt-2">Kelompok Olah Sampah Kreatif</div>
       </header>
 
       <!-- Subjudul Video -->
-      <section class="text-center mt-8">
-        <h2 class="text-2xl font-semibold text-white drop-shadow flex items-center justify-center gap-2">
+      <section class="text-center mt-6">
+        <h2 class="text-xl md:text-2xl font-semibold text-light drop-shadow flex items-center justify-center gap-2">
           <span>🎥</span> Video Panduan Pembuatan Kompos
         </h2>
       </section>
 
       <!-- Video Section -->
-      <section class="flex flex-col md:flex-row justify-center gap-6 p-6 bg-kelopak-video">
+      <section class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 p-4 md:p-6">
         <iframe class="w-full md:w-1/2 aspect-video rounded-lg shadow" src="https://www.youtube.com/embed/DSfdgPct_h0" frameborder="0" allowfullscreen></iframe>
         <iframe class="w-full md:w-1/2 aspect-video rounded-lg shadow" src="https://www.youtube.com/embed/bwKKA2AUNHM" frameborder="0" allowfullscreen></iframe>
       </section>
 
       <!-- Panduan Pembuatan Kompos -->
-      <section class="w-full flex justify-center py-10">
-        <div class="w-full max-w-4xl bg-kelopak-panduan rounded-lg p-6 shadow-lg">
-          <h2 class="text-2xl font-bold text-center mb-6 text-kelopak-light">🌱 Langkah-Langkah Pembuatan Kompos</h2>
-          <ol class="space-y-4 text-base leading-relaxed text-kelopak-light">
+      <section class="w-full flex justify-center py-6 md:py-10">
+        <div class="w-full max-w-4xl bg-menu-active rounded-lg p-4 md:p-6 shadow-lg">
+          <h2 class="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-light">🌱 Langkah-Langkah Pembuatan Kompos</h2>
+          <ol class="space-y-3 md:space-y-4 text-base leading-relaxed text-light">
             <li>
               <strong>1. Pengumpulan Sampah Organik</strong>
               <ul class="list-disc list-inside ml-4">
@@ -94,7 +93,7 @@
       </section>
 
       <!-- Footer -->
-      <footer class="bg-kelopak-footer text-kelopak-light text-center p-4 mt-8">
+      <footer class="bg-footer text-light text-center p-3 md:p-4 mt-6 md:mt-8 text-sm">
         <p>© 2025 KELOPAK - Kelompok Olah Sampah Kreatif</p>
         <p>ITS Surabaya</p>
         <p>
