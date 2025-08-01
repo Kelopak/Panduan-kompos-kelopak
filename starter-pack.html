@@ -16,7 +16,7 @@
     .bg-menu-active { background-color: #715C83; }
     .bg-menu-hover { background-color: #8F79A1; }
     .bg-main-header { background-color: #715C83; }
-    .bg-content { background-color: #D8F3DC; } /* Warna hijau muda */
+    .bg-content { background-color: #D8F3DC; }
     .bg-footer { background-color: #715C83; }
     .text-light { color: #F6F4F8; }
     .text-dark { color: #203732; }
@@ -27,9 +27,21 @@
     .bg-card { background-color: rgba(235, 251, 238, 0.9); }
     .card-border { border-color: #B7E4C7; }
     
+    /* Warna untuk announcement */
+    .bg-announcement { 
+      background-color: #FFF3B0;
+      background: linear-gradient(90deg, #FFF3B0 0%, #F8E58C 100%);
+    }
+    .text-announcement { color: #9A6A03; }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    
     @keyframes slidein {
       from { transform: translateX(-100%);}
       to { transform: translateX(0);}
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
     }
     .animate-slidein {
       animation: slidein 0.2s cubic-bezier(0.4,0,0.2,1);
@@ -45,6 +57,7 @@
     </svg>
   </button>
 
+  <!-- Drawer Menu Overlay -->
   <div id="drawer" class="fixed inset-0 bg-black bg-opacity-30 z-40 hidden">
     <aside class="bg-sidebar w-56 h-full shadow-lg flex flex-col pt-6 px-4 animate-slidein">
       <button id="close-btn" class="self-end mb-6 text-light bg-menu-active rounded-full p-2" aria-label="Tutup Menu">
@@ -61,6 +74,7 @@
 
   <!-- Main Content -->
   <div class="flex flex-col min-h-screen md:pl-0">
+    <!-- Desktop Sidebar -->
     <aside class="hidden md:flex w-40 bg-sidebar flex-col pt-6 shadow-lg fixed inset-y-0 left-0 z-10">
       <nav class="flex flex-col gap-1 px-2">
         <a href="starter-pack.html" class="rounded py-2 px-2 bg-menu-active text-light text-base font-semibold transition mb-1">HerbaKit-A</a>
@@ -69,6 +83,15 @@
     </aside>
 
     <main class="flex-1 md:ml-40">
+      <!-- Promo Announcement -->
+      <div class="bg-announcement text-announcement text-center py-3 px-4 animate-pulse">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3">
+          <span class="font-bold text-sm md:text-base">🎉 PROMO SPESIAL HARI INI!</span>
+          <span class="text-xs md:text-sm">Pesan HerbaKit-A sekarang dapat GRATIS 5 bibit tanaman tambahaan + bonus alat pengaduk!</span>
+          <a href="#order" class="underline font-semibold text-xs md:text-sm whitespace-nowrap">KLIK UNTUK PESAN</a>
+        </div>
+      </div>
+
       <!-- Header -->
       <header class="text-center py-4 bg-main-header text-light">
         <h1 class="text-xl md:text-2xl font-bold">HerbaKit-A</h1>
@@ -88,10 +111,15 @@
               <ol class="list-decimal list-inside space-y-3">
                 <li class="font-medium">Wadah Kompos dari karung bekas</li>
                 <li class="font-medium">Tanah/skam</li>
+                <li class="font-medium">Limbah (organik):
+                  <ul class="list-disc list-inside ml-4 mt-1 font-normal">
+                    <li>Daun basah/kering</li>
+                    <li>Ranting yang dicacah</li>
+                    <li>Bahan organik lainnya</li>
                   </ul>
                 </li>
                 <li class="font-medium">Sarung tangan & Alat cacah</li>
-                <li class="font-medium">Brosur petunjuk langkah + QR code digital tutorial pembuatan kompos</li>
+                <li class="font-medium">Leaflet petunjuk langkah + QR code digital tutorial pembuatan kompos</li>
                 <li class="font-medium">Bibit tunas lidah buaya</li>
                 <li class="font-medium">Pot daur ulang dari botol bekas</li>
               </ol>
@@ -102,7 +130,7 @@
               <h3 class="font-bold text-center mb-2">💡 Cara Penggunaan</h3>
               <ul class="list-disc list-inside text-sm space-y-1">
                 <li>Karung bekas dapat digunakan langsung sebagai wadah kompos</li>
-                <li>Botol telah dipotong dan dijadikan langsung pot tanaman</li>
+                <li>Botol bekas bisa dipotong dan dijadikan pot tanaman</li>
                 <li>Scan QR code untuk panduan visual lengkap</li>
               </ul>
             </div>
@@ -115,8 +143,8 @@
         <p>© 2025 KELOPAK - Kelompok Olah Sampah Kreatif</p>
         <p>ITS Surabaya</p>
         <p>
-          <a href="https://www.instagram.com/its_creabiz/" target="_blank" class="underline hover:text-gray-300">
-            📸 Instagram ITS Creabiz
+          <a href="https://www.instagram.com/its_campus/" target="_blank" class="underline hover:text-gray-300">
+            📸 Instagram ITS
           </a>
         </p>
       </footer>
