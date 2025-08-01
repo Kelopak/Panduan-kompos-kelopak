@@ -27,17 +27,24 @@
     .bg-card { background-color: rgba(235, 251, 238, 0.9); }
     .card-border { border-color: #B7E4C7; }
     
-    /* Warna untuk announcement */
+    /* Warna dan animasi untuk announcement */
     .bg-announcement { 
       background-color: #FFF3B0;
       background: linear-gradient(90deg, #FFF3B0 0%, #F8E58C 100%);
+      transform: translateY(-100%);
+      animation: slideDown 0.5s forwards 0.5s;
     }
     .text-announcement { color: #9A6A03; }
     .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
     
+    /* Animasi */
     @keyframes slidein {
       from { transform: translateX(-100%);}
       to { transform: translateX(0);}
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
     }
     @keyframes pulse {
       0%, 100% { opacity: 1; }
@@ -83,8 +90,8 @@
     </aside>
 
     <main class="flex-1 md:ml-40">
-      <!-- Promo Announcement -->
-      <div class="bg-announcement text-announcement text-center py-3 px-4 animate-pulse">
+      <!-- Promo Announcement with Slide Animation -->
+      <div id="promo-banner" class="bg-announcement text-announcement text-center py-3 px-4 animate-pulse">
         <div class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3">
           <span class="font-bold text-sm md:text-base">🎉 PROMO SPESIAL HARI INI!</span>
           <span class="text-xs md:text-sm">Pesan HerbaKit-A sekarang dapat GRATIS 3 bibit tanaman tambahan + bonus Merchandise!</span>
@@ -111,15 +118,8 @@
               <ol class="list-decimal list-inside space-y-3">
                 <li class="font-medium">Wadah Kompos dari karung bekas</li>
                 <li class="font-medium">Tanah/skam</li>
-                <li class="font-medium">Limbah (organik):
-                  <ul class="list-disc list-inside ml-4 mt-1 font-normal">
-                    <li>Daun basah/kering</li>
-                    <li>Ranting yang dicacah</li>
-                    <li>Bahan organik lainnya</li>
-                  </ul>
-                </li>
                 <li class="font-medium">Sarung tangan & Alat cacah</li>
-                <li class="font-medium">Leaflet petunjuk langkah + QR code digital tutorial pembuatan kompos</li>
+                <li class="font-medium">Brosur petunjuk langkah + QR code digital tutorial pembuatan kompos</li>
                 <li class="font-medium">Bibit tunas lidah buaya</li>
                 <li class="font-medium">Pot daur ulang dari botol bekas</li>
               </ol>
@@ -152,6 +152,7 @@
   </div>
 
   <script>
+    // Drawer Menu Script
     const menuBtn = document.getElementById('menu-btn');
     const drawer = document.getElementById('drawer');
     const closeBtn = document.getElementById('close-btn');
@@ -160,6 +161,14 @@
     closeBtn.addEventListener('click', () => drawer.classList.add('hidden'));
     drawer.addEventListener('click', (e) => {
       if (e.target === drawer) drawer.classList.add('hidden');
+    });
+
+    // Optional: Close promo banner after click
+    const promoBanner = document.getElementById('promo-banner');
+    promoBanner.addEventListener('click', function() {
+      this.style.transform = 'translateY(-100%)';
+      this.style.transition = 'transform 0.5s ease-out';
+      setTimeout(() => this.remove(), 500);
     });
   </script>
 </body>
