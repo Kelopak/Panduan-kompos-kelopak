@@ -27,24 +27,17 @@
     .bg-card { background-color: rgba(235, 251, 238, 0.9); }
     .card-border { border-color: #B7E4C7; }
     
-    /* Warna dan animasi untuk announcement */
+    /* Warna untuk announcement */
     .bg-announcement { 
       background-color: #FFF3B0;
       background: linear-gradient(90deg, #FFF3B0 0%, #F8E58C 100%);
-      transform: translateY(-100%);
-      animation: slideDown 0.5s forwards 0.5s;
     }
     .text-announcement { color: #9A6A03; }
     .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
     
-    /* Animasi */
     @keyframes slidein {
       from { transform: translateX(-100%);}
       to { transform: translateX(0);}
-    }
-    @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
     }
     @keyframes pulse {
       0%, 100% { opacity: 1; }
@@ -90,8 +83,8 @@
     </aside>
 
     <main class="flex-1 md:ml-40">
-      <!-- Promo Announcement with Slide Animation -->
-      <div id="promo-banner" class="bg-announcement text-announcement text-center py-3 px-4 animate-pulse">
+      <!-- Promo Announcement -->
+      <div class="bg-announcement text-announcement text-center py-3 px-4 animate-pulse">
         <div class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3">
           <span class="font-bold text-sm md:text-base">🎉 PROMO SPESIAL HARI INI!</span>
           <span class="text-xs md:text-sm">Pesan HerbaKit-A sekarang dapat GRATIS 3 bibit tanaman tambahan + bonus Merchandise!</span>
@@ -130,7 +123,7 @@
               <h3 class="font-bold text-center mb-2">💡 Cara Penggunaan</h3>
               <ul class="list-disc list-inside text-sm space-y-1">
                 <li>Karung bekas dapat digunakan langsung sebagai wadah kompos</li>
-                <li>Botol bekas bisa dipotong dan dijadikan pot tanaman</li>
+                <li>Botol bekas telah dipotong dan dijadikan pot tanaman</li>
                 <li>Scan QR code untuk panduan visual lengkap</li>
               </ul>
             </div>
@@ -152,7 +145,6 @@
   </div>
 
   <script>
-    // Drawer Menu Script
     const menuBtn = document.getElementById('menu-btn');
     const drawer = document.getElementById('drawer');
     const closeBtn = document.getElementById('close-btn');
@@ -161,14 +153,6 @@
     closeBtn.addEventListener('click', () => drawer.classList.add('hidden'));
     drawer.addEventListener('click', (e) => {
       if (e.target === drawer) drawer.classList.add('hidden');
-    });
-
-    // Optional: Close promo banner after click
-    const promoBanner = document.getElementById('promo-banner');
-    promoBanner.addEventListener('click', function() {
-      this.style.transform = 'translateY(-100%)';
-      this.style.transition = 'transform 0.5s ease-out';
-      setTimeout(() => this.remove(), 500);
     });
   </script>
 </body>
