@@ -13,18 +13,19 @@
       background-repeat: no-repeat;
     }
     .bg-sidebar { background-color: #203732; }
-    .bg-menu-active { background-color: #715C83; } /* Tetap warna original */
-    .bg-menu-hover { background-color: #8F79A1; } /* Tetap warna original */
-    .bg-main-header { background-color: #715C83; } /* Tetap warna original header */
-    .bg-content { background-color: #E6F9F7; } /* DIUBAH: Biru muda cerah */
-    .bg-footer { background-color: #715C83; } /* Tetap warna original footer */
+    .bg-menu-active { background-color: #715C83; }
+    .bg-menu-hover { background-color: #8F79A1; }
+    .bg-main-header { background-color: #715C83; }
+    .bg-content { background-color: #D5F0E8; } /* Soft mint green */
+    .bg-footer { background-color: #715C83; }
     .text-light { color: #F6F4F8; }
-    .text-dark { color: #203732; } /* Untuk teks di konten utama */
+    .text-dark { color: #203732; }
     .menu-kompos { background-color: #20639B !important; color: #F6F4F8 !important; }
     
-    /* Warna untuk HerbaKit-A */
-    .bg-herbakit-content { background-color: #E6F9F7; } /* DIUBAH: Biru muda cerah */
-    .bg-card { background-color: rgba(255, 255, 255, 0.8); } /* Card semi-transparan */
+    /* Warna untuk konten */
+    .bg-herbakit-content { background-color: #D5F0E8; }
+    .bg-card { background-color: rgba(245, 255, 250, 0.9); }
+    .card-border { border-color: #A8D5C0; }
     
     @keyframes slidein {
       from { transform: translateX(-100%);}
@@ -35,7 +36,7 @@
     }
   </style>
 </head>
-<body class="bg-content text-dark"> <!-- Ganti ke text-dark untuk konten -->
+<body class="bg-content text-dark">
 
   <!-- Drawer Menu -->
   <button id="menu-btn" class="fixed top-4 left-4 z-30 bg-sidebar text-light rounded-full p-2 shadow-md focus:outline-none md:hidden" aria-label="Menu">
@@ -68,97 +69,58 @@
     </aside>
 
     <main class="flex-1 md:ml-40">
-      <!-- Header (Tetap warna original) -->
+      <!-- Header -->
       <header class="text-center py-4 bg-main-header text-light">
         <h1 class="text-xl md:text-2xl font-bold">HerbaKit-A</h1>
         <div class="text-xs md:text-base italic mt-1">Paket Starter Kompos Rumahan</div>
       </header>
 
-      <!-- Konten Utama (Warna diubah) -->
+      <!-- Konten Utama -->
       <section class="w-full flex justify-center py-4 md:py-8 px-2">
-        <div class="w-full max-w-4xl rounded-lg shadow-lg overflow-hidden border border-gray-200">
+        <div class="w-full max-w-4xl rounded-lg shadow-md overflow-hidden bg-herbakit-content border border-card-border">
           <h2 class="text-lg md:text-2xl font-bold text-center py-3 text-light bg-main-header">
-            📦 Paket Lengkap HerbaKit-A
+            📦 Isi Paket HerbaKit-A
           </h2>
           
-          <div class="bg-herbakit-content p-4 md:p-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              
-              <!-- Kolom Kiri -->
-              <div class="space-y-4">
-                <div class="bg-card p-3 rounded-lg border border-gray-200">
-                  <strong class="block mb-2 text-lg text-dark">1. Wadah Kompos</strong>
-                  <ul class="list-disc list-inside ml-2">
-                    <li>Ember 20L dengan aerasi</li>
-                    <li>Penutup kedap udara</li>
-                    <li>Termometer mini</li>
+          <div class="p-4 md:p-6">
+            <!-- Daftar sesuai permintaan -->
+            <div class="bg-card p-4 rounded-lg border border-card-border mb-4">
+              <ol class="list-decimal list-inside space-y-3">
+                <li class="font-medium">Wadah Kompos dari bahan bekas</li>
+                <li class="font-medium">Tanah/skam</li>
+                <li class="font-medium">Limbah (organik):
+                  <ul class="list-disc list-inside ml-4 mt-1 font-normal">
+                    <li>Daun basah/kering</li>
+                    <li>Ranting yang dicacah</li>
+                    <li>Bahan organik lainnya</li>
                   </ul>
-                </div>
-                
-                <div class="bg-card p-3 rounded-lg border border-gray-200">
-                  <strong class="block mb-2 text-lg text-dark">2. Media Tanam</strong>
-                  <ul class="list-disc list-inside ml-2">
-                    <li>Tanah subur premium 5kg</li>
-                    <li>Kompos starter cepat</li>
-                    <li>Pasir steril</li>
+                </li>
+                <li class="font-medium">Sarung tangan & Alat cacah</li>
+                <li class="font-medium">Leaflet petunjuk langkah + QR code digital tutorial pembuatan kompos</li>
+                <li class="font-medium">Bibit:
+                  <ul class="list-disc list-inside ml-4 mt-1 font-normal">
+                    <li>Lidah buaya</li>
+                    <li>Lidah mertua</li>
+                    <li>Daun sirih</li>
                   </ul>
-                </div>
-                
-                <div class="bg-card p-3 rounded-lg border border-gray-200">
-                  <strong class="block mb-2 text-lg text-dark">3. Peralatan</strong>
-                  <ul class="list-disc list-inside ml-2">
-                    <li>Sarung tangan taman</li>
-                    <li>Pencacah ergonomis</li>
-                    <li>Pengaduk stainless</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- Kolom Kanan -->
-              <div class="space-y-4">
-                <div class="bg-card p-3 rounded-lg border border-gray-200">
-                  <strong class="block mb-2 text-lg text-dark">4. Bibit Tanaman</strong>
-                  <ul class="list-disc list-inside ml-2">
-                    <li>Lidah buaya organik</li>
-                    <li>Lidah mertua variegata</li>
-                    <li>Daun sirih lokal</li>
-                  </ul>
-                </div>
-                
-                <div class="bg-card p-3 rounded-lg border border-gray-200">
-                  <strong class="block mb-2 text-lg text-dark">5. Wadah Tanam</strong>
-                  <ul class="list-disc list-inside ml-2">
-                    <li>Pot daur ulang kreatif</li>
-                    <li>Hanging planter</li>
-                    <li>Pot vertikal</li>
-                  </ul>
-                </div>
-                
-                <div class="bg-card p-3 rounded-lg border border-gray-200">
-                  <strong class="block mb-2 text-lg text-dark">6. Panduan</strong>
-                  <ul class="list-disc list-inside ml-2">
-                    <li>Buku panduan ilustrasi</li>
-                    <li>Video tutorial QR code</li>
-                    <li>Kalender perawatan</li>
-                  </ul>
-                </div>
-              </div>
+                </li>
+              </ol>
             </div>
-            
-            <!-- Tips Section -->
-            <div class="mt-6 bg-white bg-opacity-80 p-4 rounded-lg border border-gray-300">
-              <strong class="block text-center mb-2 text-lg text-dark">💡 Tips Penggunaan</strong>
-              <ul class="list-disc list-inside text-sm">
-                <li>Simpan di tempat kering sebelum digunakan</li>
-                <li>Mulai dengan sampah organik rumah tangga</li>
-                <li>Scan QR code untuk panduan video lengkap</li>
+
+            <!-- Tambahan informasi -->
+            <div class="bg-card p-4 rounded-lg border border-card-border">
+              <h3 class="font-bold text-center mb-2">💡 Cara Penggunaan</h3>
+              <ul class="list-disc list-inside text-sm space-y-1">
+                <li>Semua bahan dirancang untuk pemula</li>
+                <li>Scan QR code untuk panduan visual</li>
+                <li>Dapat digunakan langsung setelah menerima paket</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Footer (Tetap warna original) -->
+      <!-- Footer -->
       <footer class="bg-footer text-light text-center p-2 md:p-4 mt-4 md:mt-8 text-xs md:text-sm">
         <p>© 2025 KELOPAK - Kelompok Olah Sampah Kreatif</p>
         <p>ITS Surabaya</p>
